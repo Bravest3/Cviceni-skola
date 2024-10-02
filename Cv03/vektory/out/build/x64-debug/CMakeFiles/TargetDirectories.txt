@@ -1,0 +1,3 @@
+D:/271002/Cviceni-skola/Cv03/vektory/out/build/x64-debug/CMakeFiles/vektory.dir
+D:/271002/Cviceni-skola/Cv03/vektory/out/build/x64-debug/CMakeFiles/edit_cache.dir
+D:/271002/Cviceni-skola/Cv03/vektory/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
