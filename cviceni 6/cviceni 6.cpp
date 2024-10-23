@@ -43,7 +43,7 @@ int DelkySlov(char* text, int delky[100]) {
 	{
 		v = isalpha(text[k]);
 
-		if (v >> 0) {
+		if (v > 0) {
 			++e;
 			delky[x] = e;
 		}
@@ -54,12 +54,21 @@ int DelkySlov(char* text, int delky[100]) {
 	}
 	return 0;
 }
+int maxDelkaSlova() {
+	for (int g = 1; g < sizeof(text); ++g) {
+		if(delky[0]<delky[g]){
+			delky[0]=delky[g];
+		}
+	}
+	return 0;
+}
 int main()
 {
 	soucet();
 	cislice();
 	DelkySlov( text, delky);
+	maxDelkaSlova();
 	printf("Pocet pismen: %d\n", a);
-	printf("Pocet cislic: %d", d);
-	printf("Delky jednotlivych slov:");
+	printf("Pocet cislic: %d\n", d);
+	printf("Delky jednotlivych slov: %d\n", delky[0]);
 }
