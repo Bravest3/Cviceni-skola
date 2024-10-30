@@ -4,9 +4,11 @@
 #include "cviceni7.h"
 #include <math.h>
 #include "Body2d.h"
+#include "Body2d.cpp"
+#include <limits.h>
 #define POCET_BODU 10
 int a[1];
-double vel[POCET_BODU];
+
 using namespace std;
 
 
@@ -24,6 +26,11 @@ int main()
    17, 98 };
 	printf("Zadej dva body X a Y:");
 	scanf_s("%d,%d", &a[0], &a[1]);
-	indexNejblizsi();
+
+
+//indexNejblizsi(POCET_BODU, body, a[0], a[1]);
+	printf("Vysledek: %d\n", indexNejblizsi(POCET_BODU, body, a[0], a[1]));
+	printf("Vysledek dalsi: %lf\n", prumernaVzdalenost(POCET_BODU, body, a[0], a[1]));
+	bodyPerimetr(POCET_BODU, body, a[0], a[1],10);
 	return 0;
 }
