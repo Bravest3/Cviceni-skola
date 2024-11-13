@@ -1,6 +1,6 @@
 #pragma once
 
-enum typOperace { soucet = 1, skalarniSoucin, vektorovySoucin };
+enum typOperace { soucet = 1, skalarniSoucin, vektorovySoucin, porovnani };
 
 struct vector3d {
     double x;
