@@ -1,1 +1,2 @@
-V textu je 72 pismen a 7 cislic
+V textu je 72 pismen a 7 cislic a 1 vety.
+A dokonce je tam taky: 19 slov

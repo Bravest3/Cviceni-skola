@@ -5,7 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include<ctype.h>
+#include <ctype.h>
 using namespace std;
 
 int main()
@@ -32,14 +32,39 @@ int main()
 		else if (c2 > 0) {
 			b++;
 		}
-		
+
 
 	}
+	int vety = 0;
+	for (int p = 0; p <= text.length() - 1; p++) {
+		if (text[p] == '.' || text[p] == '?' || text[p] == '!') {
+			++vety;
+		}
+	}
+	int slova = 0;
+	int d1;
+	int d2;
+	bool slovocine = false;
+	for (int g = 0; g <= text.length(); g++) {
+		d1 = isalpha(text[g]);
+		d2 = isalpha(text[g]);
+		
+		if (d1 > 0) {
+			slovocine = true;
 
+		}
+		else if (d2 == 0) {
+			slovocine = false;
+		}
+		if (text[g] == ' ' || text[g] == '.' || text[g] == '?' || text[g] == '!' && slovocine == true) {
+			++slova;
+		}
+	}
 	ofstream vysledky("vysledky.txt");
-	vysledky << "V textu je " << a << " pismen" << " a " << b << " cislic" << endl;
+	vysledky << "V textu je " << a << " pismen" << " a " << b << " cislic" << " a " << vety << " vety." << endl;
+	vysledky << "A dokonce je tam taky: " << slova << " slov" << endl;
 	vysledky.close();
-	cout <<"V textu je " << a << " pismen" << " a " << b << " cislic" << endl;
-	
+	cout <<"V textu je " << a << " pismen" << " a " << b << " cislic" << " a " << vety << " veta/y." << endl;
+	cout << "A dokonce je tam taky: " << slova << " slov" << endl;
 	
 }
